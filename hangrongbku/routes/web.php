@@ -24,6 +24,10 @@ Route::get('/hangrongbku/products',function(){
 Route::get('/hangrongbku/user',function(){
 	return view('template.pages.user_inform');
 });
+Route::get('hanagrongbku/categories/{id}',[
+	'as'=>'categories.getCategories',
+	'uses' => 'ProductController@getCategories'
+]);
 Route::get('/sign-out',[
 	'as' => 'signout.logout',
 	'uses' => 'Auth\LoginController@logout'
