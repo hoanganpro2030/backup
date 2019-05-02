@@ -23,4 +23,13 @@ class ProductController extends Controller
 		$categories = DB::select('select * from categories');
     	return view('template.pages.index',compact('products','categories'));
     }
+    public function getProduct($id){
+    	if (!Auth::check()){
+			return redirect()->route('signin.getSignin');
+		}
+		$product = DB::table('products')->where('id',$id)->first();
+		$relatedPd = DB::table('products')->where('cateID',$product->cateID)->get();
+		$seller = DB::table('users')->where('id',$product->sellerID)->first();
+		return view('template.pages.product',compact('product','seller','relatedPd'));
+    }
 }
