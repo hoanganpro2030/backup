@@ -21,9 +21,9 @@
 							<div class="space20">&nbsp;</div>
 
 							<div class="single-item-desc">
-								<p>Liên hệ người bán: <a href="" style="color: blue">{{$seller->name}}</a></p>
+								<p style="color: #fff">Liên hệ người bán: <a href="" style="color: #ffbe28">{{$seller->name}}</a></p>
 								<div class="space20">&nbsp;</div>
-								<p>Số điện thoại đặt hàng trực tiếp: <a style="color: blue">{{$seller->phone}}</a></p>
+								<p style="color: #fff">Số điện thoại đặt hàng trực tiếp: <a style="color: #ffbe28">{{$seller->phone}}</a></p>
 							</div>
 							<div class="space20">&nbsp;</div>
 
