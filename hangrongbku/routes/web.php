@@ -29,10 +29,23 @@ Route::get('hanagrongbku/categories/{id}',[
 	'as'=>'categories.getCategories',
 	'uses' => 'ProductController@getCategories'
 ]);
+Route::get('hangrongbku/order',[
+	'as'=> 'order.getCart',
+	'uses' => 'ProductController@getCart'
+]);
+Route::get('hangrongbku/order/{pid}/user/{uid}',[
+	'as'=> 'order.addToCart',
+	'uses' => 'ProductController@addToCart'
+]);
+Route::get('hangrongbku/order/remove/{id}',[
+	'as'=> 'order.removeCart',
+	'uses' => 'ProductController@removeCart'
+]);
 Route::get('/sign-out',[
 	'as' => 'signout.logout',
 	'uses' => 'Auth\LoginController@logout'
 ]);
+
 
 
 

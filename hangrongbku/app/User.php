@@ -19,6 +19,13 @@ class User extends Authenticatable
     protected $fillable = [
         'id', 'name', 'email', 'password', 'phone', 'address', 'avatar', 'sex', 'status', 'dateOfBirth', 'remember_token'
     ];
+    public function products(){
+        return $this->hasMany('App\Products','sellerID','id');
+    }
+
+    // public function relcustomer(){
+    //     return $this->belongsTo('App/Relcustomer','id_relcustomer','id');
+    // }
 
     /**
      * The attributes that should be hidden for arrays.

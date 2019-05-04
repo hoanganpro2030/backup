@@ -20,8 +20,10 @@ class CreateUsercartsTable extends Migration
                 $table->foreign('userID')->references('id')->on('users')->onDelete('cascade');
                 $table->integer('productID')->unsigned();
                 $table->foreign('productID')->references('id')->on('products')->onDelete('cascade');
+                $table->integer('quantity');
+                $table->boolean('status');
                 $table->timestamps();
-            });
+            }); 
         
         
     }

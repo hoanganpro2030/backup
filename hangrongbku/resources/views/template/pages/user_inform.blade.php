@@ -4,7 +4,7 @@
 	<div class ="main-content">
 		<div class="row">
 			@include('template.user_option')
-			<div class=" col-sm-9 offset-2">
+			<div class="col-sm-9 offset-2">
 				<form>
 					<h4>Thông tin tài khoản</h4>
 					<div class="space20">&nbsp;</div>

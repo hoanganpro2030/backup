@@ -27,33 +27,17 @@
 							</div>
 							<div class="space20">&nbsp;</div>
 
-							<p>Options:</p>
+
 							<div class="single-item-options">
-								<select class="wc-select" name="size">
-									<option>Size</option>
-									<option value="XS">XS</option>
-									<option value="S">S</option>
-									<option value="M">M</option>
-									<option value="L">L</option>
-									<option value="XL">XL</option>
-								</select>
 								<select class="wc-select" name="color">
-									<option>Color</option>
-									<option value="Red">Red</option>
-									<option value="Green">Green</option>
-									<option value="Yellow">Yellow</option>
-									<option value="Black">Black</option>
-									<option value="White">White</option>
-								</select>
-								<select class="wc-select" name="color">
-									<option>Qty</option>
+									<option>Số lượng</option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
 								</select>
-								<a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+								<a class="add-to-cart" href="{{route('order.addToCart',[$product->id,Auth::User()->id])}}"><i class="fa fa-shopping-cart"></i></a>
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -112,7 +96,7 @@
 							@endfor
 					</div> <!-- .beta-products-list -->
 				</div>
-				<div class="col-sm-3 aside">
+<!-- 				<div class="col-sm-3 aside">
 					<div class="widget">
 						<h3 class="widget-title">Best Sellers</h3>
 						<div class="widget-body">
@@ -147,7 +131,7 @@
 								</div>
 							</div>
 						</div>
-					</div> <!-- best sellers widget -->
+					</div> best sellers widget
 					<div class="widget">
 						<h3 class="widget-title">New Products</h3>
 						<div class="widget-body">
@@ -182,8 +166,8 @@
 								</div>
 							</div>
 						</div>
-					</div> <!-- best sellers widget -->
-				</div>
+					</div> 
+				</div> -->
 			</div>
 		</div> <!-- #content -->
 	</div> <!-- .container -->
